@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정다혜 - 영어로 세계정복하기</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo"><i class="fas fa-leaf"></i> 정다혜</div>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link">홈</a></li>
+          <li><a href="#about" class="nav-link">소개</a></li>
+          <li><a href="#sns" class="nav-link">SNS</a></li>
+          <li><a href="#world" class="nav-link">세계정복</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">정다혜</h1>
+          <p class="hero-subtitle">영어로 세계정복하는 꿈을 꾸는</p>
+          <p class="hero-subtitle">따뜻한 마음의 개발자입니다 🌍</p>
+          <div class="hero-cta">
+            <a href="#world" class="cta-button">세계정복 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">정다혜라는 사람은요...</h2>
+        <div class="about-grid">
+          <div class="about-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>기본정보</h3>
+            <p>부산 출생, 양산에서 자란 2004년생 개발자</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-dumbbell"></i>
+            <h3>운동 좋아해요</h3>
+            <p>친구들과 함께하는 탁구를 가장 좋아해요!</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-code"></i>
+            <h3>개발자</h3>
+            <p>고등학교 때 코딩할 일 없다고 했지만, 컴퓨터학부 재학중!</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-utensils"></i>
+            <h3>먹는거 좋아해요</h3>
+            <p>가리는 음식 없이 모든 음식을 즐기는 사람</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-heart"></i>
+            <h3>봉사 좋아해요</h3>
+            <p>3년간 273시간 봉사, 대구 북구 대표 자원봉사자상 수상</p>
+          </div>
+          <div class="about-card">
+            <i class="fas fa-laugh-beam"></i>
+            <h3>모토</h3>
+            <p>되는 대로 즐기자!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNS Section -->
+    <section id="sns" class="sns-section">
+      <div class="container">
+        <h2 class="section-title">SNS로 연결해요</h2>
+        <div class="sns-content">
+          <p class="sns-description">여행 일상을 함께 나누고 싶어요!</p>
+          <div class="sns-buttons">
+            <a
+              href="https://www.instagram.com/ekgp_jeong"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sns-btn instagram-btn"
+            >
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+              <small>@ekgp_jeong</small>
+            </a>
+            <a href="mailto:dharah@naver.com" class="sns-btn email-btn">
+              <i class="fas fa-envelope"></i>
+              <span>Email</span>
+              <small>dahae@gmail.com</small>
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="sns-btn github-btn"
+            >
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+              <small>Jungdaha</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- World Domination Section -->
+    <section id="world" class="world-section">
+      <div class="container">
+        <h2 class="section-title">세계정복 프로젝트</h2>
+        <p class="section-subtitle">
+          어릴 때부터 여행 유튜브 보는 게 취미였어요.<br />영어로 전세계를
+          돌아다니는 사람들을 동경했습니다...
+        </p>
+
+        <div class="world-content">
+          <!-- World Map with Leaflet -->
+          <div class="map-container">
+            <div id="leaflet-map"></div>
+          </div>
+
+          <!-- Travel Log Cards -->
+          <div class="travel-logs">
+            <div class="travel-card" data-country="Philippines">
+              <div class="card-header">
+                <h3>필리핀 보라카이</h3>
+                <i class="fas fa-plane-departure"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  하얀 모래와 투명한 바다가 인상적이었던 곳
+                </p>
+                <div class="card-highlights">
+                  <span class="highlight">#보라카이</span>
+                  <span class="highlight">#해변</span>
+                  <span class="highlight">#천국</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="travel-card" data-country="HongKong">
+              <div class="card-header">
+                <h3>홍콩</h3>
+                <i class="fas fa-building"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-text">
+                  활기찬 도시의 에너지를 느낄 수 있었던 경험
+                </p>
+                <div class="card-highlights">
+                  <span class="highlight">#홍콩</span>
+                  <span class="highlight">#도시</span>
+                  <span class="highlight">#활기</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="travel-card" data-country="Thailand">
+              <div class="card-header">
+                <h3>태국 (방콕, 파타야)</h3>
+                <i class="fas fa-gopuram"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-text">불교 문화와 따뜻한 사람들의 나라</p>
+                <div class="card-highlights">
+                  <span class="highlight">#태국</span>
+                  <span class="highlight">#문화</span>
+                  <span class="highlight">#여유</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="travel-card" data-country="Japan">
+              <div class="card-header">
+                <h3>일본 (후쿠오카, 오사카)</h3>
+                <i class="fas fa-torii-gate"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-text">정갈하고 세심한 일본 문화의 매력</p>
+                <div class="card-highlights">
+                  <span class="highlight">#일본</span>
+                  <span class="highlight">#문화</span>
+                  <span class="highlight">#깔끔함</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="travel-card" data-country="USA">
+              <div class="card-header">
+                <h3>미국 (라스베가스, LA)</h3>
+                <i class="fas fa-statue-of-liberty"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-text">광활한 대륙의 스케일을 경험한 곳</p>
+                <div class="card-highlights">
+                  <span class="highlight">#미국</span>
+                  <span class="highlight">#드넓음</span>
+                  <span class="highlight">#꿈</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="travel-card" data-country="Korea">
+              <div class="card-header">
+                <h3>한국 (부산, 양산)</h3>
+                <i class="fas fa-home"></i>
+              </div>
+              <div class="card-body">
+                <p class="card-text">태어난 부산, 자란 양산. 항상 돌아올 집</p>
+                <div class="card-highlights">
+                  <span class="highlight">#고향</span>
+                  <span class="highlight">#부산</span>
+                  <span class="highlight">#양산</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- English Skills -->
+        <div class="english-section">
+          <h3>영어는 자신감! 🌟</h3>
+          <p>
+            현실의 벽에 못이겨 토익과 토플 점수도 갖고 있지만,<br />
+            결국 숫자는 나부랭이일 뿐.
+          </p>
+          <div class="skill-bars">
+            <div class="skill">
+              <label>Speaking</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%">85%</div>
+              </div>
+            </div>
+            <div class="skill">
+              <label>Listening</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 80%">80%</div>
+              </div>
+            </div>
+            <div class="skill">
+              <label>Reading</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 88%">88%</div>
+              </div>
+            </div>
+            <div class="skill">
+              <label>Writing</label>
+              <div class="progress-bar">
+                <div class="progress" style="width: 78%">78%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2026 정다혜. 영어로 세계정복하기 프로젝트 🌍</p>
+        <p class="footer-quote">모토: 되는 대로 즐기자!</p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script>
+      // Leaflet Map Initialization
+      const visitedLocations = [
+        {
+          name: "Philippines - Boracay",
+          lat: 5.905,
+          lng: 125.92,
+          country: "Philippines",
+          emoji: "🏝️",
+        },
+        {
+          name: "Hong Kong",
+          lat: 22.3193,
+          lng: 114.1694,
+          country: "HongKong",
+          emoji: "🌃",
+        },
+        {
+          name: "Thailand - Bangkok, Pattaya",
+          lat: 13.7563,
+          lng: 100.5018,
+          country: "Thailand",
+          emoji: "🙏",
+        },
+        {
+          name: "Japan - Fukuoka, Osaka",
+          lat: 34.0668,
+          lng: 131.4691,
+          country: "Japan",
+          emoji: "🏯",
+        },
+        {
+          name: "USA - Las Vegas, Los Angeles",
+          lat: 36.1699,
+          lng: -115.1398,
+          country: "USA",
+          emoji: "🗽",
+        },
+        {
+          name: "South Korea - Busan, Yangsan",
+          lat: 35.1595,
+          lng: 129.0746,
+          country: "Korea",
+          emoji: "🏠",
+          isHome: true,
+        },
+      ];
+
+      // Initialize map
+      const map = L.map("leaflet-map", {
+        center: [20, 0],
+        zoom: 2,
+        minZoom: 2,
+        maxZoom: 10,
+        zoomControl: true,
+        scrollWheelZoom: true,
+      });
+
+      // Add OpenStreetMap tile layer
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap contributors",
+        maxNativeZoom: 19,
+        maxZoom: 10,
+      }).addTo(map);
+
+      // Add markers for visited locations
+      visitedLocations.forEach((location) => {
+        const customIcon = L.divIcon({
+          className: `leaflet-custom-marker ${location.isHome ? "home-marker" : "visited-marker"}`,
+          html: `<div class="marker-content">${location.emoji}</div>`,
+          iconSize: [45, 45],
+          iconAnchor: [22.5, 22.5],
+          popupAnchor: [0, -22.5],
+        });
+
+        const marker = L.marker([location.lat, location.lng], {
+          icon: customIcon,
+        })
+          .bindPopup(
+            `
+                    <div class="map-popup">
+                        <h4>${location.name}</h4>
+                        <p>Click to see travel log</p>
+                    </div>
+                `,
+          )
+          .addTo(map);
+
+        marker.on("click", function () {
+          const card = document.querySelector(
+            `.travel-card[data-country="${location.country}"]`,
+          );
+          if (card) {
+            card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            card.classList.add("highlight-card");
+            setTimeout(() => card.classList.remove("highlight-card"), 2000);
+          }
+        });
+
+        marker.on("mouseover", function () {
+          this.openPopup();
+          const card = document.querySelector(
+            `.travel-card[data-country="${location.country}"]`,
+          );
+          if (card) {
+            card.style.boxShadow = "0 15px 50px rgba(76, 175, 80, 0.5)";
+          }
+        });
+
+        marker.on("mouseout", function () {
+          this.closePopup();
+          const card = document.querySelector(
+            `.travel-card[data-country="${location.country}"]`,
+          );
+          if (card) {
+            card.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+          }
+        });
+      });
+
+      // Travel card interaction
+      const travelCards = document.querySelectorAll(".travel-card");
+
+      travelCards.forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          this.style.boxShadow = "0 15px 50px rgba(76, 175, 80, 0.5)";
+        });
+
+        card.addEventListener("mouseleave", function () {
+          this.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.1)";
+        });
+
+        card.addEventListener("click", function () {
+          const country = this.getAttribute("data-country");
+          const location = visitedLocations.find(
+            (loc) => loc.country === country,
+          );
+          if (location) {
+            map.setView([location.lat, location.lng], 5);
+          }
+        });
+      });
+
+      // Scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".about-card, .travel-card, .sns-btn")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+
+      // Smooth scroll for navigation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Handle map resize on scroll
+      window.addEventListener("resize", function () {
+        setTimeout(() => {
+          map.invalidateSize();
+        }, 100);
+      });
+    </script>
+  </body>
+</html>
